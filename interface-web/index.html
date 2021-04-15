@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:980px) and (min-width:928px)" href="css/mobile.css">
+    <title>OCR TIFINAGH</title>
+</head>
+
+<body>
+    <header>
+        <h3>Reconnaissance optique <br>des caractères Tifinagh</h3>
+        <img src="./img/logo.png" alt="" class="logo">
+    </header>
+    <hr class="line">
+    <main>
+        <div id="board">
+            <button class="btn" id="clear">Clear</button>
+            <div id="canvas-container">
+            </div>
+        </div>
+
+        <button id="cnvrtBtn">OCR >></button>
+        
+        <div id="box">
+            <button class="btn" id="copyBtn" onclick="copyToClipboard('#resultat')">Copy</button>
+            <p class="unselectable" id="resultat"></p>
+        </div>
+
+    </main>
+    <footer>
+        <h2 id="ourName">Copyright &#169; HexaCoders</h2>
+    </footer>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+<script src="./js/app.js"></script>
+<script>
+    function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+    }
+    $.fn.extend({
+        disableSelection: function () {
+            this.each(function () {
+                if (typeof this.onselectstart != 'undefined') {
+                    this.onselectstart = function () { return false; };
+                } else if (typeof this.style.MozUserSelect != 'undefined') {
+                    this.style.MozUserSelect = 'none';
+                } else {
+                    this.onmousedown = function () { return false; };
+                }
+            });
+        }
+    });
+
+    $(document).ready(function () {
+        $('.unselectable').disableSelection();
+    });
+</script>
+
+
+</html>

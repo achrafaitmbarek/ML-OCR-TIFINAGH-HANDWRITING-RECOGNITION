@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+   
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+main{
+    height: 70vh;
+}
+header{
+    display :flex;
+    justify-content :space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+header .logo{
+    height: 100px;
+    width: auto;
+    margin-right: 10px;
+}
+header h3{
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    font-weight: bolder;
+    color: #1e6f5c;
+    font-size: 2rem;
+    font-family: 'Poppins', serif;
+    text-align: center;
+    display :flex;
+    align-items: center;
+
+}
+.line{
+    background-color: #1b2021;
+    height: 3px;
+    width: 100%;
+}
+
+#board{
+    border: 3px solid #1b2021;
+        background-color: #f7f7f7;
+
+    padding: 10px;
+    margin: 20px;
+}
+#cnvrtBtn{
+    font-size: 16px;
+    outline: none;
+    padding: 10px 20px;
+    border: 3px solid hsl(166, 48%, 43%);
+    background-color: #1e6f5c ;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'poppins', serif;
+    color: white;
+    font-weight: bold;
+    width: 125px;
+    transition: 400ms;
+}
+#cnvrtBtn:hover{
+    background-color: #39a189 ;
+
+}
+#cnvrtBtn:active{
+    transition:300ms;
+    transform: scale(0.8);
+}
+
+main{
+    display: flex;
+    justify-content :space-around;
+    align-items: center; 
+    height: 73vh;
+}
+#box{
+    background-color: #f7f7f7;
+    border: 3px #1b2021 solid;
+    padding: 10px;
+    
+}
+#resultat{
+    display: flex;
+    margin: 20px 10px;
+    font-size: 20rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 320px;
+    height: 320px;
+    color: #1b2021;
+    padding: 0 10px 20px 10px;
+    border: 3px solid #5f939a;
+}
+
+#canvas-container{
+    border: 3px solid #5f939a;
+    width: fit-content;
+    height: 350px;
+    margin: 20px 10px;
+    cursor: crosshair;
+}
+.btn{
+    margin-left: 10px;
+    background-color: white;
+    border: 2px solid #5f939a;
+    cursor: pointer;
+    color: #5f939a;
+    padding:5px 10px;
+    margin-top: 10px;
+    font-weight: bold;
+
+}
+.btn:hover{
+    background-color: #ddd;
+}
+.btn:active{
+    transform: scale(0.9);
+}
+
+footer{
+    justify-content: center;
+    background-color: #1b2021;
+    align-items: center;
+    padding: 20px;
+    display: flex;
+    /* margin-top: 10px; */
+
+}
+#ourName{
+    background-color: transparent;
+    font-size: 1.4rem;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: bolder;
+    color: #fff;
+    text-align: center;
+}
