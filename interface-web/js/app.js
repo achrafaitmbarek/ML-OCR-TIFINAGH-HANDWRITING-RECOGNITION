@@ -67,7 +67,6 @@ document.getElementById('resultat').innerText =
  CATEGORIES[result.indexOf(maxPossibility)];
 }
 function clear() {
-console.log('clear canvas');
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.clearTo('#ffffff');
